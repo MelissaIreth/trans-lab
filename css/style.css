@@ -1,4 +1,6 @@
 /* YeyeYeee código aquí */
+
+/*HTML INICIO*/
 *{
 	font-family: 'Montserrat', sans-serif;
 }
@@ -41,4 +43,32 @@ body{
 }
 .cuenta a{
 	color: #fcad00;
+}
+
+/*HTML 2*/
+.fondo{
+	background-color: #dddddd;
+}
+.nav{
+	background-color: #444;
+	border-color: transparent;
+}
+.navbar-default .navbar-toggle{
+	border-color: #fcad00;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #fcad00;
+}
+.l{
+	float: left;
+}
+.btnyellow{
+	padding: 15px;
+	background-color: #fcad00;
+	color: whitesmoke;
+	font-weight: 800;
+	border-radius: 0;
+	border: none;
+	font-size: 20px;
+	margin-top: 100px;
 }
