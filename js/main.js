@@ -6,3 +6,9 @@ function openSidemenu() {
 function closeSidemenu() {
     document.getElementById("myMenu").style.width = "0";
 }
+
+/*HTML4 preguntas frecuentes*/
+$(".btnask").click(function(event) {
+	$(".pregunta").toggle()
+});
+

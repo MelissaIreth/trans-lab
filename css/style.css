@@ -146,3 +146,23 @@ body{
 
 /* HTML4 */
 
+.ask{
+	background-color: #fcad00;
+	padding: 50px 0;
+}
+.las_ask{
+	margin-top: 20px;
+}
+.btnask{
+	border-radius: 0;
+	border-color: transparent;
+	color: #444;
+	background-color: whitesmoke;
+}
+.fa-angle-down{
+	float: right;
+}
+.pregunta{
+	color: #444;
+	background-color: #e8e8e8;
+}
