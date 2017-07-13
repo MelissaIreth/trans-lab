@@ -3,10 +3,42 @@
 	font-family: 'Montserrat', sans-serif;
 }
 body{
-	background-color: #585858;
+	background-color: #444;
+	color: whitesmoke;
+}
+.firstimg{
+	width: 30%;
+	margin-top: 40px;
+}
+.title{
+	font-weight: 800;
 	color: #fcad00;
 }
-img{
-	width: 50%;
-	margin-top: 40px;
+.npts{
+	margin-top: 75px;
+}
+.inputs{
+	border-radius: 0;
+	border: 1px solid;
+	padding: 20px;
+	background-color: transparent;
+	font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+.btnsesion{
+	border: none;
+	padding: 20px;
+	font-weight: bolder;
+	color: #fcad00;
+}
+.contrasena{
+	margin: 10px;
+}
+.contrasena a{
+	color: whitesmoke;
+}
+.cuenta{
+	margin-top: 60px;
+}
+.cuenta a{
+	color: #fcad00;
 }
