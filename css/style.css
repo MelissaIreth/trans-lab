@@ -59,8 +59,50 @@ body{
 .navbar-default .navbar-toggle .icon-bar{
 	background-color: #fcad00;
 }
-.l{
-	float: left;
+#titulo{
+	margin-left: 110px;
+	font-size: 15px;
+}
+.sidemenu{
+	height: 100%; 
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden; 
+	padding-top: 60px;
+	transition: 0.5s;
+	background-color: white;
+}
+.menu{
+	font-size: 17px;
+	margin-left: 5px;
+	padding: 20px 0;
+}
+.menu a{
+	color: #444;
+	font-weight: 400;
+	display: block;
+	transition: 0.3s
+}
+.menu a:hover{
+	color: #fcad00;
+	text-decoration: none;
+}
+.menu i{
+	margin: 0 20px;
+	font-size: 20px;
+	background-color: transparent;
+	color: #fcad00;
+}
+.bars i{
+	color: whitesmoke;
+	font-size: 30px;
+	padding: 5px 7px
+}
+.bars i:hover{
+	color: #fcad00;
 }
 .btnyellow{
 	padding: 15px;
