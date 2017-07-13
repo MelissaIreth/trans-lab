@@ -3,7 +3,7 @@
 <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Trans Lab 2</title>
+    <title>Trans Lab 3</title>
      <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="docs/imagen.png" />
      <!-- LINK FONT GOOGLE -->
@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body class="fondo">
-    <nav class="navbar navbar-default nav">
+    <nav class="navbar navbar-default nav nav3">
         <a href="#" onclick="openSidemenu()" class="bars up"><i class="fa fa-bars" aria-hidden="true"></i></a>
         <span id="titulo" class="up">TRANS-LAB</span>
         <div id="myMenu" class="sidemenu">
@@ -57,16 +57,22 @@
             </div>
         </div>
     </nav>
-<section class="btns text-center container">
-    <div class="row">
-        <div class="col-xs-12">
-            <button type="button" class="btn-block btnyellow">VER SALDO</button>
-            <button type="button" class="btn-block btnyellow">CALCULAR TARIFA</button>
-            <button type="button" class="btn-block btnyellow">PERFIL</button>
-            <button type="button" class="btn-block btnyellow">PREGUNTAS FRECUENTES</button>
+    <section class="perfil text-center container">
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="docs/woman.png" class="img-responsive woman">
+            </div>
+        </div>   
+    </section>
+    <section class="perfilbody text-center container">
+        <div class="row">
+            <div class="col-xs-12">
+                <input type="text" name="correo" class="form-control input3" placeholder="name@mail.com">
+                <input type="number" name="tarjeta" class="form-control input3 trjt" placeholder="Numero tarjeta" class="inputarjeta">    
+                <button type="button" class="btn-block btnyellow btny3">AGREGAR TARJETA</button>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!-- FONT AWESOME -->

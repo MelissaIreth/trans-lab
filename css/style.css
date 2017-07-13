@@ -1,6 +1,5 @@
-/* YeyeYeee código aquí */
+/* HTML INICIO */
 
-/*HTML INICIO*/
 *{
 	font-family: 'Montserrat', sans-serif;
 }
@@ -45,7 +44,8 @@ body{
 	color: #fcad00;
 }
 
-/*HTML 2*/
+/* HTML 2 */
+
 .fondo{
 	background-color: #dddddd;
 }
@@ -114,3 +114,35 @@ body{
 	font-size: 20px;
 	margin-top: 100px;
 }
+
+/* HTML3 */
+
+.nav3{
+	margin-bottom: 0;
+}
+.perfil{
+	background-color: #fcad00;
+	padding: 20px 0;
+}
+.woman{
+	max-width: 50%;
+	display: initial;
+}
+.perfilbody{
+	margin-top: 30px;
+}
+.btny3{
+	margin-top: 30px;
+}
+.input3{
+	padding: 20px;
+	border-radius: 0;
+}
+.trjt{
+	background-color: transparent;
+	border-color: transparent;
+	border-bottom-color: #444;
+}
+
+/* HTML4 */
+
