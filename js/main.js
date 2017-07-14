@@ -31,14 +31,18 @@ $(".btnsaldo").click(function(e){
 		$(".input4").css("visibility", "hidden")
 });
 
-	
-/*HTML 6 calcular saldo
 
-	$(".costo").append('<h4 class="text-center sld">COSTO PASAJE</h4><h3 class="text-center numerossaldo">$</h3>')
-	$(".saldo").append('<h4 class="text-center sld">SALDO PASAJE</h4><h3 class="text-center numerossaldo">$</h3>')
-*/
+ /*HTML 6 calcular saldo*/
+ $(".btncalcular").click(function(event) {
+ 	$(".versaldo").toggle()
 
-/*HTML 1 validacion*/
+ });
+ $(".ncosto").append('$1')
+ $(".nsaldo").append('$2')
+  
+  	
+ 
+ /*HTML 1 validacion*/
 $(document).ready(function() {
 	
 	$("#submit").click(function validar(email,pass){
@@ -54,7 +58,7 @@ $(document).ready(function() {
 		{
 			$(".invalid-email").append("Porfavor ingresa un correo valido");	
 		}
-		else if(pass.length<7 || pass_test.test(pass)==false)
+		else if(pass.length != 8 || pass_test.test(pass)==false)
 		{
 			$(".invalid-pass").append("Debe contener 8 caracteres");
 		}
@@ -62,6 +66,7 @@ $(document).ready(function() {
 		{
 			window.location.href ="index2.html"
 		}
+		
 	});
 
 /*HTML 3 guardar datos tarjeta (8 numeros)*/
@@ -75,8 +80,32 @@ $(document).ready(function() {
 		}else{
 			$(".datotarjeta").append('<p class="tarjetaguardada">'+numerot+'</p>');
 			$(".tarjetainvalida").hide();
+			$(".inputarjeta").val("");
 		}
+
+		var alltarjetas = [];
+			alltarjetas.push(numerot);
+            console.log(alltarjetas);
+            localStorage.setItem("numerot", JSON.stringify(alltarjetas));
 	});	
+});
+var saveMail = $("#mail").text(localStorage.getItem(email));
+		$("#mail").append(saveMail);
 
 
+/*LLAMADA DE LA API*/
+
+$.ajax({
+	url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip={id}',
+	type: 'GET',
+	dataType: 'json',
+})
+.done(function() {
+	console.log("success");
+})
+.fail(function() {
+	console.log("error");
+})
+.always(function() {
+	console.log("complete");
 });

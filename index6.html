@@ -57,18 +57,16 @@
             </div>
         </div>
     </nav>
-    <section class="saldo container">
+    <section class="allsaldo container">
         <div class="row">
             <div class="col-xs-12">
-                <input type="text" name="ntarjeta" placeholder="Numero tarjeta" class="input4 trjt form-control">
+                <input type="text" name="ntarjeta" placeholder="Numero tarjeta" class="input4 trjt form-control" id="value">
                 <div class="col-xs-6 select-2">
                     <span>Tarifa</span>
                     <select class="form-control select6">
-                        <option>-Tarifa-</option>
-                        <option>Tarjeta1</option>
-                        <option>Tarjeta2</option>
-                        <option>Tarjeta3</option>
-                        <option>Tarjeta4</option>    
+                        <option>Horario alto: $740</option>
+                        <option>Horario medio: $680</option>
+                        <option>Horario bajo: $640</option>    
                     </select>
                 </div>
                 <div class="col-xs-6 select-2">
@@ -85,10 +83,16 @@
             </div>
             <div class="versaldo">
                 <div class="col-xs-12">
-                    <div class="costo"></div>
+                    <div class="costo">
+                        <h4 class="text-center sld">COSTO PASAJE</h4>
+                        <h3 class="text-center numerossaldo ncosto"></h3>
+                    </div>
                 </div>
                 <div class="col-xs-12">
-                    <div class="saldo"></div>
+                    <div class="saldo">
+                        <h4 class="text-center sld">SALDO PASAJE</h4>
+                        <h3 class="text-center numerossaldo nsaldo"></h3>
+                    </div>
                 </div>
             </div>
         </div>    
