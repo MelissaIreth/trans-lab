@@ -35,10 +35,12 @@ $(".btnsaldo").click(function(e){
  /*HTML 6 calcular saldo*/
  $(".btncalcular").click(function(event) {
  	$(".versaldo").toggle()
+ 	var select = $(".select6").val();
+ 	var selecttarjeta = $(".slctrjt").val()
+ 	$(".ncosto").append('<h3>'+select+'</h3>')
+ 	$(".nsaldo").append('<h3>'+selecttarjeta+'<h3>')
 
  });
- $(".ncosto").append('$1')
- $(".nsaldo").append('$2')
   
   	
  
@@ -66,7 +68,6 @@ $(document).ready(function() {
 		{
 			window.location.href ="index2.html"
 		}
-		
 	});
 
 /*HTML 3 guardar datos tarjeta (8 numeros)*/
@@ -89,8 +90,6 @@ $(document).ready(function() {
             localStorage.setItem("numerot", JSON.stringify(alltarjetas));
 	});	
 });
-var saveMail = $("#mail").text(localStorage.getItem(email));
-		$("#mail").append(saveMail);
 
 
 /*LLAMADA DE LA API*/
