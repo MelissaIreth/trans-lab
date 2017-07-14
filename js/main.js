@@ -24,10 +24,14 @@ $(".btnask4").click(function(ev){
 /*HTML 5 ver saldo*/
 $(".btnsaldo").click(function(e){
 	$(".showsaldo").toggle()
-})
-
+});
 	$(".showsaldo").append('<h4 class="text-center sld">SALDO TOTAL</h4><h3 class="text-center numerosld">$</h3>')
 
+	$(".select1").click(function(t) {
+		$(".input4").css("visibility", "hidden")
+});
+
+	
 /*HTML 6 calcular saldo
 
 	$(".costo").append('<h4 class="text-center sld">COSTO PASAJE</h4><h3 class="text-center numerossaldo">$</h3>')

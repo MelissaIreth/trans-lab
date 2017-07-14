@@ -204,6 +204,7 @@ body{
 	background-color: #fcad00;
 	color: whitesmoke;
 	margin-top: 40px;
+	display: none;
 }
 .sld{
 	background-color: #444;
