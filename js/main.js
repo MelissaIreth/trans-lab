@@ -8,8 +8,17 @@ function closeSidemenu() {
 }
 
 /*HTML4 preguntas frecuentes*/
-$(".btnask").click(function(event){
-	$(".pregunta").toggle()
+$(".btnask1").click(function(event){
+	$(".uno").toggle()
+});
+$(".btnask2").click(function(even){
+	$(".dos").toggle()
+});
+$(".btnask3").click(function(eve){
+	$(".tres").toggle()
+});
+$(".btnask4").click(function(ev){
+	$(".cuatro").toggle()
 });
 
 /*HTML 5 ver saldo*/
@@ -31,9 +40,11 @@ $(document).ready(function() {
 	$("#submit").click(function validar(email,pass){
 		var email = $("#email").val();
 		var pass = $("#password").val();
+
+		localStorage.email = $("#email").val();
 		 
-		var email_test = /^([a-zA-Z0-8_.+-])+\@(([a-zA-Z0-8-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-		var pass_test = /([0-8])/;
+		var email_test = /^([a-zA-Z0-8_.+-])+\@(([a-zA-Z0-8-])+\.)+([a-zA-Z0-8]{2,4})+$/;
+		var pass_test = /([0-9]{8})/;
 		 
 		if(!email_test.test(email))
 		{
@@ -48,5 +59,20 @@ $(document).ready(function() {
 			window.location.href ="index2.html"
 		}
 	});
+
+/*HTML 3 guardar datos tarjeta (8 numeros)*/
+	$(".addtarjeta").click(function(){
+		var numerot = $(".trjt").val();
+
+		localStorage.tarjeta = $(".trjt").val();
+
+		if(numerot.length != 8){
+			$(".tarjetainvalida").append('<span class="invalid-tarj">INGRESE UN NUMERO VALIDO</span>');
+		}else{
+			$(".datotarjeta").append('<p class="tarjetaguardada">'+numerot+'</p>');
+			$(".tarjetainvalida").hide();
+		}
+	});	
+
 
 });
