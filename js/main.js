@@ -24,15 +24,34 @@ $(".btnask4").click(function(ev){
 /*HTML 5 ver saldo*/
 $(".btnsaldo").click(function(e){
 	$(".showsaldo").toggle()
+
+	/*LLAMADA DE LA API*/
+		var versaldo = $(".trjt").val()
+		$.ajax({
+			url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + versaldo,
+			type: 'GET',
+			dataType: 'json',
+		})
+		.done(function(e) {
+			console.log("success");
+			$(".showsaldo").append('<h4 class="text-center sld">SALDO TOTAL</h4><h3 class="text-center numerosld">'+e.saldoTarjeta+'</h3>')
+
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
 });
-	$(".showsaldo").append('<h4 class="text-center sld">SALDO TOTAL</h4><h3 class="text-center numerosld">$</h3>')
+	
 
 	$(".select1").click(function(t) {
 		$(".input4").css("visibility", "hidden")
 });
 
 
- /*HTML 6 calcular saldo*/
+/*HTML 6 calcular saldo*/
  $(".btncalcular").click(function(event) {
  	$(".versaldo").toggle()
  	var select = $(".select6").val();
@@ -44,7 +63,7 @@ $(".btnsaldo").click(function(e){
   
   	
  
- /*HTML 1 validacion*/
+/*HTML 1 validacion*/
 $(document).ready(function() {
 	
 	$("#submit").click(function validar(email,pass){
@@ -89,22 +108,6 @@ $(document).ready(function() {
             console.log(alltarjetas);
             localStorage.setItem("numerot", JSON.stringify(alltarjetas));
 	});	
-});
 
 
-/*LLAMADA DE LA API*/
-
-$.ajax({
-	url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip={id}',
-	type: 'GET',
-	dataType: 'json',
-})
-.done(function() {
-	console.log("success");
-})
-.fail(function() {
-	console.log("error");
-})
-.always(function() {
-	console.log("complete");
 });
