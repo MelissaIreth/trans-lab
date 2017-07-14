@@ -197,3 +197,17 @@ body{
 	padding: 10px;
 	padding-bottom: 30px;
 }
+
+/* HTML 6 */
+.select-2{
+	margin-top: 20px;
+	color: #444;
+}
+.select6{
+	border-radius: 0;
+	border-color: transparent;
+}
+.costo, .saldo{
+	color: whitesmoke;
+	margin-top: 40px;
+}
