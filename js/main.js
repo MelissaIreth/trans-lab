@@ -28,7 +28,7 @@ $(".btnsaldo").click(function(e){
 	/*LLAMADA DE LA API*/
 		var versaldo = $(".trjt").val()
 		$.ajax({
-			url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + versaldo,
+			url: 'https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + versaldo,
 			type: 'GET',
 			dataType: 'json',
 		})
@@ -60,7 +60,7 @@ $(".btnsaldo").click(function(e){
  		/*LLAMADA DE LA API HTML6*/
 		var calcularsaldo = $(".trjt6").val()
 		$.ajax({
-			url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + calcularsaldo,
+			url: 'https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + calcularsaldo,
 			type: 'GET',
 			dataType: 'json',
 		})
