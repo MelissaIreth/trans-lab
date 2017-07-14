@@ -45,6 +45,10 @@ body{
 .cuenta a{
 	color: #fcad00;
 }
+/*HTML 1 validacion*/
+.invalid-email, .invalid-pass{
+	color: #ce5957;
+}
 
 /* HTML 2 */
 

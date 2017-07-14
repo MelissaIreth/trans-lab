@@ -24,3 +24,29 @@ $(".btnsaldo").click(function(e){
 	$(".costo").append('<h4 class="text-center sld">COSTO PASAJE</h4><h3 class="text-center numerossaldo">$</h3>')
 	$(".saldo").append('<h4 class="text-center sld">SALDO PASAJE</h4><h3 class="text-center numerossaldo">$</h3>')
 */
+
+/*HTML 1 validacion*/
+$(document).ready(function() {
+	
+	$("#submit").click(function validar(email,pass){
+		var email = $("#email").val();
+		var pass = $("#password").val();
+		 
+		var email_test = /^([a-zA-Z0-8_.+-])+\@(([a-zA-Z0-8-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		var pass_test = /([0-8])/;
+		 
+		if(!email_test.test(email))
+		{
+			$(".invalid-email").append("Porfavor ingresa un correo valido");	
+		}
+		else if(pass.length<7 || pass_test.test(pass)==false)
+		{
+			$(".invalid-pass").append("Debe contener 8 caracteres");
+		}
+		else
+		{
+			window.location.href ="index2.html"
+		}
+	});
+
+});
