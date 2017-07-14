@@ -55,9 +55,28 @@ $(".btnsaldo").click(function(e){
  $(".btncalcular").click(function(event) {
  	$(".versaldo").toggle()
  	var select = $(".select6").val();
- 	var selecttarjeta = $(".slctrjt").val()
- 	$(".ncosto").append('<h3>'+select+'</h3>')
- 	$(".nsaldo").append('<h3>'+selecttarjeta+'<h3>')
+ 	var selecttarjeta = $(".input4").val()
+ 	
+ 		/*LLAMADA DE LA API HTML6*/
+		var calcularsaldo = $(".trjt6").val()
+		$.ajax({
+			url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + calcularsaldo,
+			type: 'GET',
+			dataType: 'json',
+		})
+		.done(function(e) {
+			console.log("success");
+			var resta = e.saldoTarjeta - select; /*TENGO QUE SACAR EL $ y . AL SALDO*/
+			 	$(".ncosto").append('<h3>$'+select+'</h3>')
+ 				$(".nsaldo").append('<h3>$'+resta+'<h3>')
+
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
 
  });
   
