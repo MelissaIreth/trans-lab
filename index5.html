@@ -3,7 +3,7 @@
 <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Trans Lab 2</title>
+    <title>Trans Lab 5</title>
      <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="docs/imagen.png" />
      <!-- LINK FONT GOOGLE -->
@@ -57,16 +57,25 @@
             </div>
         </div>
     </nav>
-<section class="btns text-center container">
-    <div class="row">
-        <div class="col-xs-12">
-            <button type="button" class="btn-block btnyellow"><a href="index5.html"> VER SALDO</a></button>
-            <button type="button" class="btn-block btnyellow"><a href="index6.html"> CALCULAR TARIFA</a></button>
-            <button type="button" class="btn-block btnyellow"><a href="index3.html"> PERFIL</a></button>
-            <button type="button" class="btn-block btnyellow"><a href="index4.html"> PREGUNTAS FRECUENTES</a></button>
-        </div>
-    </div>
-</section>
+    <section class="saldo container">
+        <div class="row">
+            <div class="col-xs-12">
+                <input type="text" name="ntarjeta" placeholder="Numero tarjeta" class="input4 trjt form-control">
+                <select class="form-control select">
+                    <option>-Selecciona tu tarjeta-</option>
+                    <option>Tarjeta1</option>
+                    <option>Tarjeta2</option>
+                    <option>Tarjeta3</option>
+                    <option>Tarjeta4</option>    
+                </select>
+                <button class="btn-block btnyellow btnsaldo">VER SALDO</button>
+            </div>
+            <div class="col-xs-12">
+                <div class="showsaldo"></div>
+            </div>
+        </div>    
+    </section>
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!-- FONT AWESOME -->

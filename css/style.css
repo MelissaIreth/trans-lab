@@ -29,6 +29,8 @@ body{
 	border: none;
 	padding: 20px;
 	font-weight: bolder;
+}
+.btnsesion a{
 	color: #fcad00;
 }
 .contrasena{
@@ -107,12 +109,14 @@ body{
 .btnyellow{
 	padding: 15px;
 	background-color: #fcad00;
-	color: whitesmoke;
 	font-weight: 800;
 	border-radius: 0;
 	border: none;
 	font-size: 20px;
 	margin-top: 100px;
+}
+.btnyellow a{
+	color: whitesmoke;
 }
 
 /* HTML3 */
@@ -165,4 +169,31 @@ body{
 .pregunta{
 	color: #444;
 	background-color: #e8e8e8;
+}
+
+/* HTML 5 */
+
+.select{
+	border-radius: 0;
+	border-color: transparent;
+	margin-top: 20px;
+}
+.input4{
+	padding: 20px;
+	border-radius: 0;
+	margin-top: 40px;
+}
+.showsaldo{
+	background-color: #fcad00;
+	color: whitesmoke;
+	margin-top: 40px;
+}
+.sld{
+	background-color: #444;
+	color: whitesmoke;
+	padding: 10px;
+}
+.numerosld{
+	padding: 10px;
+	padding-bottom: 30px;
 }
