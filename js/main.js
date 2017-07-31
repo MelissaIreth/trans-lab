@@ -80,8 +80,7 @@ $(".btnsaldo").click(function(e){
 
  });
   
-  	
- 
+
 /*HTML 1 validacion*/
 $(document).ready(function() {
 	
@@ -90,13 +89,15 @@ $(document).ready(function() {
 		var pass = $("#password").val();
 
 		localStorage.email = $("#email").val();
+
 		 
 		var email_test = /^([a-zA-Z0-8_.+-])+\@(([a-zA-Z0-8-])+\.)+([a-zA-Z0-8]{2,4})+$/;
 		var pass_test = /([0-9]{8})/;
 		 
 		if(!email_test.test(email))
 		{
-			$(".invalid-email").append("Porfavor ingresa un correo valido");	
+			$(".invalid-email").append("Porfavor ingresa un correo valido");
+				
 		}
 		else if(pass.length != 8 || pass_test.test(pass)==false)
 		{
@@ -107,6 +108,9 @@ $(document).ready(function() {
 			window.location.href ="index2.html"
 		}
 	});
+
+		var correo = localStorage.getItem("email")
+		$("#mail span").text(correo)
 
 /*HTML 3 guardar datos tarjeta (8 numeros)*/
 	$(".addtarjeta").click(function(){
@@ -127,6 +131,5 @@ $(document).ready(function() {
             console.log(alltarjetas);
             localStorage.setItem("numerot", JSON.stringify(alltarjetas));
 	});	
-
-
+	
 });
