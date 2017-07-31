@@ -96,12 +96,12 @@ $(document).ready(function() {
 		 
 		if(!email_test.test(email))
 		{
-			$(".invalid-email").append("Porfavor ingresa un correo valido");
+			$(".invalid-email").text("Porfavor ingresa un correo valido");
 				
 		}
 		else if(pass.length != 8 || pass_test.test(pass)==false)
 		{
-			$(".invalid-pass").append("Debe contener 8 caracteres");
+			$(".invalid-pass").text("Debe contener 8 caracteres");
 		}
 		else
 		{
@@ -119,9 +119,9 @@ $(document).ready(function() {
 		localStorage.tarjeta = $(".trjt").val();
 
 		if(numerot.length != 8){
-			$(".tarjetainvalida").append('<span class="invalid-tarj">INGRESE UN NUMERO VALIDO</span>');
+			$(".invalid-tarj").text('INGRESE UN NUMERO VALIDO');
 		}else{
-			$(".datotarjeta").append('<p class="tarjetaguardada">'+numerot+'</p>');
+			$(".datotarjeta p").text(numerot);
 			$(".tarjetainvalida").hide();
 			$(".inputarjeta").val("");
 		}
